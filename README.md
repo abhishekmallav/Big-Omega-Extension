@@ -125,7 +125,34 @@ If a logo fails to load:
 
 ## 🚀 Installation & Usage
 
-### Install from Source
+### Option 1: Install from Release (Recommended)
+
+**Easiest way for end users:**
+
+1. **Download the extension**
+   - Go to the [Releases](https://github.com/codedecks-in/Big-Omega-Extension/releases) section
+   - Download the latest `big-omega-extension.zip`
+
+2. **Unzip the file**
+   - Extract the downloaded ZIP file to a folder on your computer
+   - Remember the location of this folder
+
+3. **Load in Chrome**
+   - Open `chrome://extensions` in Chrome
+   - Enable **Developer mode** (toggle in top-right corner)
+   - Click **Load unpacked**
+   - Select the unzipped folder
+   - The extension is now ready to use! ✨
+
+4. **Start using**
+   - Navigate to any LeetCode problem (e.g., `https://leetcode.com/problems/two-sum/`)
+   - Click the "Companies" pill to expand/collapse company information
+
+---
+
+### Option 2: Build from Source (For Developers)
+
+**For developers who want to modify or contribute:**
 
 1. **Clone the repository**
    ```bash
