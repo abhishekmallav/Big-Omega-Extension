@@ -17,7 +17,6 @@ function App() {
 	}, []);
 
 	useEffect(() => {
-		console.log("[Big Omega Extension] Starting injection...");
 		//this.fetchStyles();
 		/**
 		 * TODO
@@ -31,29 +30,22 @@ function App() {
 		 */
 		let interval = setInterval(() => {
 			let currentHref = window.location.href;
-			console.log("[Big Omega Extension] Current URL:", currentHref);
 			
 			// Only inject on problem pages
 			if (!currentHref.includes("/problems/")) {
-				console.log("[Big Omega Extension] Not a problem page, skipping...");
 				return;
 			}
 			
 			// Find the pills container using a more specific selector
 			// Look for the difficulty pill (Easy/Medium/Hard) which is unique
 			let difficultyPill = document.querySelector('.text-difficulty-easy, .text-difficulty-medium, .text-difficulty-hard');
-			console.log("[Big Omega Extension] Difficulty pill found:", !!difficultyPill);
 			
 			let pillsContainer = difficultyPill?.parentElement;
-			console.log("[Big Omega Extension] Pills container found:", !!pillsContainer);
 			
 			let existingContainer = document.getElementById("big-omega-companies");
 			let existingPill = document.getElementById("big-omega-companies-pill");
-			console.log("[Big Omega Extension] Existing container:", !!existingContainer);
 			
 			if (pillsContainer && !existingContainer && !existingPill) {
-				console.log("[Big Omega Extension] Injecting company pill and tags...");
-				
 				// Create the clickable Companies pill (same style as Topics/Hint)
 				let companiesPill = document.createElement("div");
 				companiesPill.id = "big-omega-companies-pill";
@@ -92,10 +84,8 @@ function App() {
 				
 				const root = ReactDOM.createRoot(companiesContainer);
 				let theme = document.querySelector("html")?.dataset?.theme || "dark";
-				console.log("[Big Omega Extension] Rendering with theme:", theme);
 				root.render(<CompanyTags theme={theme} />, companiesContainer);
 				clearInterval(interval);
-				console.log("[Big Omega Extension] Injection complete!");
 			}
 		}, 1000);
 	}, []);

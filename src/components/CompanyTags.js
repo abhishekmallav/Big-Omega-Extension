@@ -111,11 +111,7 @@ function CompanyTags(props) {
 			// e.g. /problems/flip-string-to-monotone-increasing/
 			let problem = window.location.pathname.split("/")[2];
 			
-			console.log("[Big Omega] Host:", host);
-			console.log("[Big Omega] Problem:", problem);
-			
 			const companies = problemToCompanyMatcher[host]?.[problem] || [];
-			console.log("[Big Omega] Found companies:", companies);
 			
 			setState((prevState) => ({
 				...prevState,
