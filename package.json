@@ -15,14 +15,14 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build:prod": "set INLINE_RUNTIME_CHUNK=false&& react-scripts build && npm run zip-build && npm run move-files",
+		"build:prod": "cross-env INLINE_RUNTIME_CHUNK=false react-scripts build && npm run zip-build && npm run move-files",
 		"zip-build": "bestzip big-omega-extension.zip build/",
-		"move-files": "copy leetcode-live.zip ..\\webapp\\public",
+		"move-files": "copyfiles leetcode-live.zip ../webapp/public",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"build": "set INLINE_RUNTIME_CHUNK=false&& node ./build-rewired.js && npm run clean && npm run move-index && npm run zip-build",
-		"clean": "cd build && move static\\js\\*.js big-omega-tools.js && move static\\css\\*.css big-omega-tools.css && rmdir /s /q static",
-		"move-index": "copy public\\index.html build\\index.html"
+		"build": "cross-env INLINE_RUNTIME_CHUNK=false node ./build-rewired.js && npm run clean && npm run move-index && npm run zip-build",
+		"clean": "node scripts/clean-build.js",
+		"move-index": "copyfiles public/index.html build"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -43,8 +43,11 @@
 		]
 	},
 	"devDependencies": {
+		"copyfiles": "^2.4.1",
+		"cross-env": "^7.0.3",
 		"env-cmd": "^10.1.0",
 		"rewire": "^5.0.0",
+		"rimraf": "^5.0.10",
 		"sass": "^1.52.0"
 	}
 }
