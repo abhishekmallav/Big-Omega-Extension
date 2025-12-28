@@ -27,6 +27,8 @@ This helps you:
 - **Understand problem importance** - See which problems are frequently asked across the industry
 - **Save time** - No need to search externally for company-tagged problems
 
+![](https://github.com/abhishekmallav/Big-Omega-Extension/public/demo.gif)
+
 ---
 
 ## ✨ What's New in This Version
