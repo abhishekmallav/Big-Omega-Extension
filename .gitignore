@@ -107,3 +107,4 @@ extention/node_modules
 webapp/node_modules
 widgets/node_modules
 envs/.env
+*.zip
