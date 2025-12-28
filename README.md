@@ -130,7 +130,7 @@ If a logo fails to load:
 **Easiest way for end users:**
 
 1. **Download the extension**
-   - Go to the [Releases](https://github.com/codedecks-in/Big-Omega-Extension/releases) section
+   - Go to the [Releases](https://github.com/abhishekmallav/Big-Omega-Extension/releases) section
    - Download the latest `big-omega-extension.zip`
 
 2. **Unzip the file**
