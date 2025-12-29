@@ -158,7 +158,7 @@ If a logo fails to load:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/codedecks-in/Big-Omega-Extension.git
+   git clone https://github.com/abhishekmallav/Big-Omega-Extension.git
    cd Big-Omega-Extension
    ```
 
